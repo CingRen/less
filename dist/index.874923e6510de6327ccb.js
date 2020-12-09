@@ -1,0 +1,1 @@
+(()=>{"use strict";[10,20,30,40].forEach((function(o,c){console.log("=>",o,c)}))})();
