@@ -30,5 +30,13 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CingRen/webpack-stu2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CingRen/webpack-stu2/issues"
+  },
+  "homepage": "https://github.com/CingRen/webpack-stu2#readme",
   "description": ""
 }
