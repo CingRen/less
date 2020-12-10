@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');//加载html-webpack-plugin插件模块
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');//加载清理模块
 module.exports = {
     mode:'production',//development
     entry:{
-        index:'./src/index.js',
-        product:'./src/product.js'
+        index:'./src/index.js'
     },
     output:{
         path:path.resolve(__dirname,'../dist'),//打包完成输出文件的路径  绝对路径
@@ -13,12 +13,12 @@ module.exports = {
         filename:'[name].[hash].js' //[name] 默认是main 如果是多入口就是入口键名
         // filename:'[name].js'
     },
-    // devServer: {
-    //     contentBase: path.join(__dirname, "dist"),//输出路径
-    //     compress: true,//是否压缩
-    //     port: 9000,//端口号 开启服务器的端口
-    //     open:true//是否自动打开浏览器
-    //   },
+    devServer: {
+        contentBase: path.join(__dirname, "../dist"),//输出路径,开启网页服务器的根路径
+        compress: true,//是否压缩
+        port: 8080,//端口号 开启服务器的端口
+        open:true//是否自动打开浏览器
+      },
     module:{
         //解析规则
         rules:[
@@ -84,20 +84,23 @@ module.exports = {
     plugins:[
         new HtmlWebPackPlugin({//构造函数传参
             title:"网页标题aa", //网页标题
-            template: './src/tpl.html',//模板路径
+            template: './src/index.html',//模板路径
             inject: 'body',//（true | body | head | false），true 默认值，script标签位于html文件的 body 底部； 
                         //body：script标签位于html文件的 body底部；
                         //head： script标签位于html文件的 head中；false：不插入生成的js文件
             minify: {//html压缩规则
                 removeComments: true,//是否移除注释
-                removeAttributeQuotes: true,//是否移除属性的双引号
-                collapseWhitespace: true //是否移除空白
+                removeAttributeQuotes: false,//是否移除属性的双引号
+                collapseWhitespace: false //是否移除空白
             },
-            filename: 'index_1.html'//输出模板名称
+            chunks:['index'],
+            filename: 'index.html'//输出模板名称
         }),
         new miniCssExtractPlugin({//初始化插件
             filename:'[name].[hash].css'
-        })
+            // filename:'[name].css'
+        }),
+        new CleanWebpackPlugin()//创建清理插件对象
     ]
 
 }

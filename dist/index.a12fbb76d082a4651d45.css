@@ -1,0 +1,88 @@
+body {
+  background-color: burlywood;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+ul li {
+  width: 0;
+  height: 0px;
+}
+ul li:nth-child(1) {
+  border: 40px solid transparent;
+  border-right-color: red;
+}
+ul li:nth-child(2) {
+  border: 20px solid transparent;
+  border-right-color: blue;
+}
+ul li:nth-child(3) {
+  border: 40px solid transparent;
+  border-top-color: red;
+}
+ul li:nth-child(4) {
+  border: 30px solid transparent;
+  border-top-color: black;
+}
+ul li:nth-child(5) {
+  border: 40px solid transparent;
+  border-left-color: red;
+}
+ul li:nth-child(6) {
+  border: 20px solid transparent;
+  border-left-color: blue;
+}
+ul li:nth-child(7) {
+  border: 40px solid transparent;
+  border-bottom-color: red;
+}
+ul li:nth-child(8) {
+  border: 20px solid transparent;
+  border-bottom-color: blue;
+}
+
+body {
+  background-color: burlywood;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+ul li {
+  width: 0;
+  height: 0px;
+}
+ul li:nth-child(1) {
+  border: 40px solid transparent;
+  border-right-color: red;
+}
+ul li:nth-child(2) {
+  border: 20px solid transparent;
+  border-right-color: blue;
+}
+ul li:nth-child(3) {
+  border: 40px solid transparent;
+  border-top-color: red;
+}
+ul li:nth-child(4) {
+  border: 30px solid transparent;
+  border-top-color: black;
+}
+ul li:nth-child(5) {
+  border: 40px solid transparent;
+  border-left-color: red;
+}
+ul li:nth-child(6) {
+  border: 20px solid transparent;
+  border-left-color: blue;
+}
+ul li:nth-child(7) {
+  border: 40px solid transparent;
+  border-bottom-color: red;
+}
+ul li:nth-child(8) {
+  border: 20px solid transparent;
+  border-bottom-color: blue;
+}
+

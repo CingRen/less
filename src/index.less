@@ -1,11 +1,27 @@
-@width:100px;
-@height:100px;
-@fsize:40px;
-div{  /* css嵌套*/
-    p{
-        width: @width;
-        height: @height;
-        background-color: red;
-        font-size: @fsize;
+body{
+    background-color: burlywood;
+}
+.mixin(@index,@size,@color,@direction){
+    ul li:nth-child(@{index}){
+        border: @size solid transparent;
+        border-@{direction}-color:@color;
     }
 }
+ul{
+    list-style: none;
+    display: flex;
+    li{
+        width: 0;
+        height: 0px;
+    }
+}
+
+//参数：大小、颜色
+.mixin(1,40px,red,right);
+.mixin(2,20px,blue,right);
+.mixin(3,40px,red,top);
+.mixin(4,30px,black,top);
+.mixin(5,40px,red,left);
+.mixin(6,20px,blue,left);
+.mixin(7,40px,red,bottom);
+.mixin(8,20px,blue,bottom);

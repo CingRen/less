@@ -1,4 +1,2 @@
-var arr=[10,20,30,40];
-arr.forEach((i,v)=>{
-    console.log("=>",i,v)
-})
+import indexCss from './css/index.css';
+import indexLess from './index.less';
